@@ -25,12 +25,23 @@ export function AuthProvider({ children }) {
 
 	const login = async ({ email, password }) => {
 		setLoading(true)
-		// Mock async login - replace with real API call
+		// Mock async login with hardcoded credentials
 		await new Promise((r) => setTimeout(r, 600))
-		const mockUser = { id: 'u1', name: email.split('@')[0] || 'User', email }
-		setUser(mockUser)
-		setLoading(false)
-		return mockUser
+		const credentials = {
+			email: 'admin@amazatic.com',
+			password: 'password123',
+			id: 'admin',
+			name: 'Admin',
+		}
+		if (email === credentials.email && password === credentials.password) {
+			const userObj = { id: credentials.id, name: credentials.name, email: credentials.email }
+			setUser(userObj)
+			setLoading(false)
+			return userObj
+		} else {
+			setLoading(false)
+			throw new Error('Invalid credentials')
+		}
 	}
 
 	const logout = () => {
