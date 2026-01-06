@@ -1,0 +1,10 @@
+.login-page{display:flex;justify-content:center;padding:2rem}
+.form-card{width:320px;padding:1.25rem;border:1px solid #e6e6e6;border-radius:8px;background:#fff}
+.form-card h2{margin:0 0 1rem}
+.form-card label{display:block;margin-bottom:0.75rem;font-size:0.9rem}
+.form-card input{width:100%;padding:0.5rem;margin-top:0.25rem;border:1px solid #ccc;border-radius:4px}
+.btn-primary{width:100%;padding:0.6rem;margin-top:0.75rem;background:#0b5cff;color:#fff;border:none;border-radius:4px}
+.form-error{color:#c00;margin-bottom:0.5rem}
+.auth-area{display:flex;align-items:center;gap:0.5rem}
+.auth-btn{background:transparent;border:1px solid #ddd;color:#000;padding:0.25rem 0.5rem;border-radius:4px;cursor:pointer}
+.user-greet{color:#333;margin-right:0.5rem}
