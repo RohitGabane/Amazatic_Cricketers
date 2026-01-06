@@ -6,7 +6,17 @@
 .fixture-team-name { font-weight:600 }
 .fixture-team-score { font-weight:700; margin-left:6px }
 .fixture-vs { font-weight:700; color:#222; padding:0 8px }
-.fixture-status { padding:4px 8px; border-radius:12px; font-size:12px }
+.fixture-status {
+	padding:6px 10px;
+	border-radius:14px;
+	font-size:12px;
+	position: absolute;
+	right: 12px;
+	top: 12px;
+	box-shadow: 0 6px 14px rgba(11,92,255,0.06);
+	white-space: nowrap;
+	z-index: 2;
+}
 .fixture-status.inplay { background:#dff6e0; color:#137333 }
 .fixture-status.completed { background:#f0f0f0; color:#333 }
 .fixture-status.scheduled { background:#eef2ff; color:#0b5cff }

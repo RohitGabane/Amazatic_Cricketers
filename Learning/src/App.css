@@ -94,11 +94,16 @@
 .muted { color:#666 }
 
 /* Fixtures */
-.fixture-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:1rem; margin-top:1rem }
-.fixture-card { background:#fff; border-radius:8px; padding:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.06); color:#111 }
-.fixture-teams { display:flex; align-items:center; gap:12px; justify-content:space-between }
+.fixture-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* one fixture per row */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.fixture-card { background:#fff; border-radius:8px; padding:1rem; padding-right:2.5rem; box-shadow:0 2px 8px rgba(0,0,0,0.06); color:#111; position:relative; overflow:visible }
+.fixture-teams { display:flex; align-items:center; gap:12px; flex:1 }
 .fixture-team { display:flex; align-items:center; gap:10px }
 .fixture-team-logo { width:44px; height:44px; object-fit:contain; background:#fff; padding:6px; border-radius:6px }
 .fixture-team-name { font-weight:700 }
 .fixture-vs { color:#666 }
-.fixture-meta { margin-top:10px; color:#444; display:flex; justify-content:space-between; align-items:center }
+.fixture-meta { margin-top:10px; color:#444; display:flex; justify-content:space-between; align-items:center; gap:12px }
