@@ -3,7 +3,7 @@ name: Deploy Vite React App to GitHub Pages
 on:
   push:
     branches:
-      - Dev
+      - main
 
 permissions:
   contents: read
@@ -13,6 +13,10 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: Learning   # 👈 VERY IMPORTANT
 
     steps:
       - name: Checkout
@@ -32,7 +36,7 @@ jobs:
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: Learning/dist   # 👈 ALSO IMPORTANT
 
   deploy:
     needs: build
