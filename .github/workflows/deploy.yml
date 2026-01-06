@@ -1,4 +1,4 @@
-name: Deploy Vite React App to GitHub Pages
+name: Deploy React Vite App
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: Learning/dist   # 👈 VERY IMPORTANT
+        working-directory: Learning   # 👈 IMPORTANT
 
     steps:
       - name: Checkout
@@ -36,7 +36,7 @@ jobs:
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: Learning/dist   # 👈 ALSO IMPORTANT
+          path: Learning/dist          # 👈 IMPORTANT
 
   deploy:
     needs: build
