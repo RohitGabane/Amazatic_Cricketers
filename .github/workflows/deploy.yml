@@ -16,7 +16,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: Learning   # 👈 VERY IMPORTANT
+        working-directory: Learning/dist   # 👈 VERY IMPORTANT
 
     steps:
       - name: Checkout
